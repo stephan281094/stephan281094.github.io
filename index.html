@@ -1,24 +1,33 @@
 <!doctype html>
-<html lang="en" ng-app="stephan281094">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Stephan de Vries - Portfolio</title>
-    <script src="lib/angular/angular.min.js"></script>
-    <script src="js/controllers.js"></script>
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/bass.css">
+    <title>TestAnimation</title>
+    <link rel="stylesheet" href="css/main.css"/>
+    <link rel="stylesheet" href="css/colours.css"/>
+    <link rel="stylesheet" href="css/custom.css"/>
+    <link rel="stylesheet" href="css/menu.css"/>
+    <link rel="stylesheet" href="libs/reset.css"/>
+    <link rel="stylesheet" href="libs/typebase.css"/>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="js/main.js"></script>
 </head>
 <body>
-    <div class="p1 mb2 bg-light-gray">
-        <div class="measure-wide wrap">
-            <h2 class="h2">Stephan de Vries</h2>
-            <p class="p mb0">Portfolio</p>
+    <aside class="center-aside small">
+        <div data-content="" class="logo">
+            <img src="res/me.jpg" alt=""/>
+            A studious developer who loves design.
         </div>
-    </div>
-    <div class="p1">
-        <div class="measure-wide wrap">
-            <h2>Awesome stuff coming soon!</h2>
-        </div>
-    </div>
+        <menu class="slidden">
+            <div data-content="about" class="item">About</div>
+            <div data-content="projects" class="item">Projects</div>
+            <div data-content="blog" class="item">Blog</div>
+            <div onclick="document.location.href = 'https://github.com/stephan281094'" class="item">Github</div>
+            <div class="last"></div>
+        </menu>
+    </aside>
+    <main class="offscreen">
+
+    </main>
 </body>
 </html>
