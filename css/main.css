@@ -88,6 +88,9 @@ p {
     padding: 50px 0;
 }
 
+[class*='px'] {
+    transition: .2s;
+}
 .px1 {padding-left: 1rem; padding-right: 1rem;}
 .px2 {padding-left: 2rem; padding-right: 2rem;}
 .white {color: white !important;}
@@ -141,7 +144,7 @@ header .item {
     visibility: visible;
     z-index: 4;
     
-    transition: .4s;
+    transition: .2s;
 }
 
 header .item:not(:last-of-type){
@@ -162,7 +165,6 @@ header .active.item, header .item:hover {
     text-align: center;
     font-size: 18pt;
     color: #888;
-    z-index: 5;
     cursor: pointer;
     
     transition: .4s;
@@ -174,6 +176,10 @@ header .active.item, header .item:hover {
 
 @media (max-width: 800px){
     .wide {width: 100% !important;}
+    .px2 {padding-left: 1rem; padding-right: 1rem;}
+    header .item {
+        margin-right: 1em !important;
+    }
 }
 
 /* Icons */
