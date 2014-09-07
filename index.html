@@ -21,12 +21,12 @@
             <span class="bold white center">Developer, Amsterdam</span>
         </div>
     </div>
-    <header class="px2">
+    <header class="px2" ng-controller="headerCtrl">
         <div class="container">
-            <div onclick="document.location.href = '#';" data-link="home" class="item">Home</div>
-            <div onclick="document.location.href = '#/projects';" data-link="projects" class="item">Projects</div>
-            <div onclick="document.location.href = '#/about';" data-link="about" class="item">About</div>
-            <div onclick="document.location.href = '#/contact';" data-link="contact" class="item">Contact</div>
+            <a href="#" ng-class="{active: isActive('')}" class="item">Home</a>
+            <a href="#/projects" ng-class="{active: isActive('/projects')}" class="item">Projects</a>
+            <a href="#/about" ng-class="{active: isActive('/about')}" class="item">About</a>
+            <a href="#/contact" ng-class="{active: isActive('/contact')}" class="item">Contact</a>
         </div>
     </header>
     <div class="container">
@@ -34,6 +34,6 @@
             <i class="icon-hamburger"></i>
         </div>
     </div>
-    <div ui-view></div>
+    <ui-view/>
 </body>
 </html>

@@ -20,6 +20,13 @@ app.config(['$urlRouterProvider', '$stateProvider', function($urlRouterProvider,
         })
 }]);
 
+function headerCtrl($scope, $location){
+    $scope.isActive = function (viewLocation) {
+        return viewLocation === $location.path();
+    };
+}
+
+
 $(document).ready(function () {
     var top = $(window).scrollTop();
     var winHeight = $(window).height();
@@ -51,20 +58,6 @@ $(document).ready(function () {
     }
     
     fadeInBlocks();
-    
-    $('header .item').click(function(){
-        $('header .item').removeClass('active');
-        $(this).addClass('active');
-    });
-    
-    // If Hash blabla
-    //
-    //
-    //
-    
-    //
-    //
-    //
     
     $('.hamburger').hover(function(){
         $('header').addClass('visible');
