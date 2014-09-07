@@ -1,3 +1,25 @@
+var app = angular.module('app', ['ui.router']);
+
+app.config(['$urlRouterProvider', '$stateProvider', function($urlRouterProvider, $stateProvider){
+    $stateProvider
+        .state('home', {
+            url: '/',
+            templateUrl: 'home.html'
+        })
+        .state('projects', {
+            url: '/projects',
+            templateUrl: 'projects.html'
+        })
+        .state('about', {
+            url: '/about',
+            templateUrl: 'about.html'
+        })
+        .state('contact', {
+            url: '/contact',
+            templateUrl: 'contact.html'
+        })
+}]);
+
 $(document).ready(function () {
     var top = $(window).scrollTop();
     var winHeight = $(window).height();
@@ -29,6 +51,20 @@ $(document).ready(function () {
     }
     
     fadeInBlocks();
+    
+    $('header .item').click(function(){
+        $('header .item').removeClass('active');
+        $(this).addClass('active');
+    });
+    
+    // If Hash blabla
+    //
+    //
+    //
+    
+    //
+    //
+    //
     
     $('.hamburger').hover(function(){
         $('header').addClass('visible');
