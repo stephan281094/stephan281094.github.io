@@ -3,7 +3,7 @@ var app = angular.module('app', ['ui.router']);
 app.config(['$urlRouterProvider', '$stateProvider', function($urlRouterProvider, $stateProvider){
     $stateProvider
         .state('home', {
-            url: '/',
+            url: '',
             templateUrl: 'home.html'
         })
         .state('projects', {
