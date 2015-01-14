@@ -1,40 +1,19 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="app">
-
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no">
-    <title>Portfolio Stephan de Vries</title>
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="lib/animate.css">
-    <script type="text/javascript" src="lib/angular.min.js"></script>
-    <script type="text/javascript" src="lib/angular-ui-router.min.js"></script>
-    <script type="text/javascript" src="lib/jquery.min.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
+	<meta charset="UTF-8">
+	<title>Stephan's portfolio</title>
+	<meta name="viewport" content="width=device-width">
+	<meta name="description" content="A portfolio by Stephan de Vries">
+	<meta name="author" content="S.J. de Vries">
+	<link rel="stylesheet" href="stylesheets/main.css">
 </head>
-
 <body>
-    <div id="cover">
-        <div class="test">
-            <img onclick="document.location.href = '#/about';" id="avatar" src="res/images/avatar.jpg" alt="">
-            <h2 class="white center">Stephan de Vries</h2>
-            <span class="bold white center">Developer, Amsterdam</span>
-        </div>
-    </div>
-    <header class="px2" ng-controller="headerCtrl">
-        <div class="container">
-            <a href="#" ng-class="{active: isActive('')}" class="item">Home</a>
-            <a href="#/projects" ng-class="{active: isActive('/projects')}" class="item">Projects</a>
-            <a href="#/about" ng-class="{active: isActive('/about')}" class="item">About</a>
-            <a href="#/contact" ng-class="{active: isActive('/contact')}" class="item">Contact</a>
-        </div>
-    </header>
-    <div class="container">
-        <div class="white hamburger">
-            <i class="icon-hamburger"></i>
-        </div>
-    </div>
-    <ui-view/>
+	<main>
+		<section id="me">
+			<h1>Stephan de Vries</h1>
+			<span>Developer &plus; Designer</span>
+		</section>
+	</main>
 </body>
-
 </html>
