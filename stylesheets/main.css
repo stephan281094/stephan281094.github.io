@@ -2,7 +2,9 @@
 	font-family: 'Questrial';
 	font-style: normal;
 	font-weight: 400;
-	src: local('Questrial'), local('Questrial-Regular'), url('../resources/fonts/questrial.ttf') format('truetype');
+	src: local('Questrial'),
+		 local('Questrial-Regular'),
+		 url('../resources/fonts/questrial.ttf') format('truetype');
 }
 
 *:before,
@@ -22,7 +24,6 @@ body {
 	margin: 0;
 	padding: 0;
 	font-family: 'Questrial', sans-serif;
-	background-color: #f2f2f2;
 }
 
 a {
@@ -30,48 +31,68 @@ a {
 	text-decoration: none;
 }
 
+p {
+	padding: 0;
+	margin: 0;
+	font-weight: 100;
+	font-family: sans-serif;
+	color: #666;
+	font-size: 14pt;
+	text-align: justify;
+	line-height: 1.5em;
+}
+
 h1, h2, h3, h4, h5, h6 {
 	margin: 0;
+	margin-bottom: 1em;
 }
 
-main {
-	position: fixed;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	background-color: #fff;
-	display: table;
-}
-
-main #me {
+/*============================================================================
+   HERO SECTION
+  ============================================================================*/
+#hero {
 	position: relative;
 	width: 100%;
+	height: 100%;
+	display: table;
+	overflow: hidden;
+}
+
+#hero .wrap {
+	position: relative;
+	width: 100%;
+	height: 100%;
 	text-align: center;
 	vertical-align: middle;
 	display: table-cell;
-	box-shadow: inset 0  5px 0 0 #000,
-				inset 0 -5px 0 0 #000;
 }
 
-main #me h1, main #me span {
+#hero h1, #hero span {
 	text-transform: uppercase;
 }
 
-main #me h1 {
-	font-size: 33pt;
+#hero h1 {
+	font-size: 3em;
 	font-weight: 400;
 	color: #333;
+	margin-bottom: 0;
+	cursor: pointer;
+
+	transition: -webkit-transform .2s;
 }
 
-main #me span {
-	font-size: 15pt;
+#hero h1:hover {
+	-webkit-transform: scale(1.1);
+}
+
+#hero span {
+	font-size: 1.4em;
 	font-weight: 100;
 	color: #aaa;
 }
 
-@media (max-width: 800px) {
-    body {
-    	background-color: #c00;
-    }
+@media (max-width: 35em) {
+	body {
+		font-size: 80%;
+	}
 }
