@@ -7,6 +7,10 @@
 		 url('../resources/fonts/questrial.ttf') format('truetype');
 }
 
+::selection {
+	background-color: rgba(0, 0, 0, 0.2)
+}
+
 *:before,
 *:after,
 * {
@@ -27,7 +31,7 @@ body {
 }
 
 a {
-	color: #ccc;
+	color: #333;
 	text-decoration: none;
 }
 
@@ -39,7 +43,7 @@ p {
 	color: #666;
 	font-size: 14pt;
 	text-align: justify;
-	line-height: 1.5em;
+	line-height: 1.75em;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -56,6 +60,10 @@ h1, h2, h3, h4, h5, h6 {
 	height: 100%;
 	display: table;
 	overflow: hidden;
+
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
 }
 
 #hero .wrap {
@@ -76,13 +84,6 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: 400;
 	color: #333;
 	margin-bottom: 0;
-	cursor: pointer;
-
-	transition: -webkit-transform .2s;
-}
-
-#hero h1:hover {
-	-webkit-transform: scale(1.1);
 }
 
 #hero span {
