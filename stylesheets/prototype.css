@@ -103,7 +103,7 @@ h1 {
 	width: 100%;
 	padding: 4em;
 	text-align: center;
-	background-color: #fff;
+	background-color: #f2f2f2;
 }
 
 #about p {
@@ -204,6 +204,26 @@ h1 {
 	padding: 4em;
 	text-align: center;
 	background-color: #f2f2f2;
+}
+
+#contact form {
+	width: 50%;
+}
+
+#contact input, #contact textarea {
+	position: relative;
+	min-height: 40px;
+	max-width: 100%;
+	background-color: #fff;
+	padding: 1em;
+	margin: 1em 0;
+	border: 0;
+	outline: 0;
+	width: 100%;
+}
+
+textarea {
+	height: 200px;
 }
 
 /*============================================================================
