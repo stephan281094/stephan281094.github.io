@@ -44,6 +44,9 @@ p {
 	font-size: 1.7em;
 	text-align: justify;
 	line-height: 1.7em;
+
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: greyscale;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -57,10 +60,29 @@ h1 {
 	color: #333;
 }
 
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
 section:after {
 	content: "";
 	clear: both;
 	display: block;
+}
+
+header {
+	width: 100%;
+	padding: 4rem 0;
+	background-color: #fff;
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 14pt;
+}
+
+header h1 {
+	margin: 0;
 }
 
 /*============================================================================
@@ -102,119 +124,95 @@ section:after {
 }
 
 /*============================================================================
-   ABOUT SECTION
+   ABOUT SECTION   #272822
   ============================================================================*/
 #about {
 	position: relative;
 	width: 100%;
-	padding: 4em;
+	min-height: 75%;
+	font-size: 0;
 	text-align: center;
 	background-color: #f2f2f2;
+	display: table;
 }
 
-#about .wrap {
+#about .image, #about .text {
 	position: relative;
-	width: 100%;
-	height: 100%;
-	text-align: center;
+	min-height: 100%;
+	width: 50%;
 	vertical-align: middle;
-	font-size: 0;
 	display: table-cell;
+	overflow: hidden;
 }
 
-#about img {
-	width: 50%;
-	vertical-align: middle;
-	display: inline-block;
+#about .image {
+	min-height: 400px;
+	cursor: pointer;
+	background: url('../resources/images/winter.jpg') center center;
+	background-size: cover;
 }
 
-#about p {
-	width: 50%;
-	vertical-align: middle;
-	display: inline-block;
+#about .text {
+	padding: 2rem;
 }
 
+#about .text h1 {
+	font-size: 25pt;
+	text-align: left;
+}
+
+#about .text p {
+	font-size: 16pt;
+}
+
+@media (max-width: 70em) {
+	#about .image, #about .text {
+		width: 100% !important;
+		display: inline-block;
+	}
+}
 /*============================================================================
    PORTFOLIO SECTION
   ============================================================================*/
 #portfolio {
 	position: relative;
 	width: 100%;
-	padding: 4em;
 	text-align: center;
 	background-color: #fff;
-	overflow: hidden;
-}
-
-#portfolio a {
-	position: relative;
-	min-height: 300px;
-	height: 300px;
-	display: inline-block;
-	width: 33%;
-	display: inline-table;
-	cursor: pointer;
-	-webkit-transform: scale(0.9);
-
-	transition: -webkit-transform .2s;
-}
-
-#portfolio a img {
-	position: absolute;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
 	display: block;
+	font-size: 0;
+	letter-spacing: 0;
+	word-spacing: 0;
 }
 
-#portfolio a span {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	color: #fff;
-	padding: 1em;
-	font-size: 20pt;
-	font-weight: 100;
-	display: table-cell;
+#portfolio .project {
+	position: relative;
+	width: calc(100% / 3);
 	vertical-align: middle;
-	opacity: 0;
-
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: greyscale;
-	transition: .2s;
+	display: inline-block;
+	overflow: hidden;
+	cursor: pointer;
 }
 
-#portfolio a:hover {
-	-webkit-transform: scale(1);
+#portfolio .project img {
+	width: 100%;
+	transition: -webkit-transform .5s;
 }
 
-#portfolio a:hover span {
-	opacity: 1;
+#portfolio .project:hover img {
+	-webkit-transform: scale3d(1.25, 1.25, 1);
 }
 
 @media (max-width: 70em) {
-	#portfolio {
-		padding: 4em 2em;
-	}
-
-	#portfolio a {
-		width: 49%;
+	#portfolio .project {
+		width: 50%;
+		display: inline-block;
 	}
 }
 
 @media (max-width: 40em) {
-	#portfolio {
-		padding: 4em 1em;
-	}
-
-	#portfolio a {
+	#portfolio .project {
 		width: 100%;
-		-webkit-transform: scale(0.9) !important;
-	}
-
-	#portfolio a span {
-		opacity: 1;
 	}
 }
 
