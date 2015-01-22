@@ -66,13 +66,21 @@ ul {
 	margin: 0;
 }
 
+hr {
+	margin: 0 auto;
+	width: 50%;
+	height: 1px;
+	background-color: #ddd;
+	border: 0;
+}
+
 section:after {
 	content: "";
 	clear: both;
 	display: block;
 }
 
-header {
+section header {
 	position: relative;
 	width: 100%;
 	padding: 4rem 0;
@@ -82,7 +90,7 @@ header {
 	font-size: 14pt;
 }
 
-header h1 {
+section header h1 {
 	margin: 0;
 }
 
@@ -111,7 +119,9 @@ header h1 {
 }
 
 #hero h1, #hero span {
+	width: 100%;
 	text-transform: uppercase;
+	display: inline-block;
 }
 
 #hero h1 {
@@ -124,6 +134,30 @@ header h1 {
 	color: #aaa;
 }
 
+#hero a {
+	position: absolute;
+	top: 60%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	color: #00cdaa;
+	padding: 0 2rem;
+	font-size: 15pt;
+	height: 60px;
+	line-height: 60px;
+	margin-top: 100px;
+	display: inline-block;
+	border: 1px solid #00cdaa;
+	border-radius: 30px;
+	cursor: pointer;
+
+	transition: background-color .2s;
+}
+
+#hero a:hover {
+	background-color: #00cdaa;
+	color: #fff;
+}
+
 /*============================================================================
    ABOUT SECTION   #272822
   ============================================================================*/
@@ -134,6 +168,8 @@ header h1 {
 	text-align: center;
 	background-color: #f2f2f2;
 	display: table;
+	overflow: hidden;
+	display: none;
 }
 
 #about .image, #about .text {
@@ -166,8 +202,13 @@ header h1 {
 }
 
 @media (max-width: 70em) {
-	#about .image, #about .text {
-		width: 100% !important;
+	#about .image {
+		width: 100%;
+		display: inline-block;
+	}
+
+	#about .text {
+		width: 100%;
 		display: inline-block;
 	}
 }
@@ -180,7 +221,7 @@ header h1 {
 	text-align: center;
 	background-color: #fff;
 	display: block;
-	padding: 1%;
+	padding: 20px;
 	padding-bottom: 100px;
 	font-size: 0;
 	letter-spacing: 0;
@@ -190,50 +231,57 @@ header h1 {
 }
 
 #portfolio header h1 {
+	min-height: 60px;
 	display: inline-block;
 }
 
 #portfolio header a {
 	position: absolute;
-	right: 0;
+	color: #00cdaa;
+	right: 20px;
 	padding: 0 2rem;
-	margin-right: 2rem;
 	line-height: 60px;
-	border: 1px solid #ddd;
+	box-shadow: inset 0 0 0 1px #00cdaa;
 	cursor: pointer;
-	-webkit-transform: scale(.9);
+	border-radius: 30px;
 }
 
 #portfolio header a:hover {
-	border-color: #333;
+	background-color: #00cdaa;
+	color: #fff;
 }
 
-#portfolio .project {
+#portfolio li {
 	position: relative;
-	width: calc(100% / 3);
+	width: calc(100% / 3 - 40px);
+	margin: 0 20px 40px;
 	vertical-align: middle;
 	display: inline-block;
 	overflow: hidden;
-	cursor: pointer;
-	-webkit-transform: scale(.9);
 }
 
-#portfolio .project img {
+#portfolio li img {
 	width: 100%;
+	cursor: pointer;
 	transition: -webkit-transform .5s;
 }
 
-#portfolio .project:hover img {
+#portfolio li img:hover {
 	-webkit-transform: scale3d(1.25, 1.25, 1);
 }
 
 @media (max-width: 70em) {
-	#portfolio .project, #portfolio header a {
-		-webkit-transform: scale(.95);
+	#portfolio {
+		padding: 1%;
 	}
 
-	#portfolio .project {
-		width: 50%;
+	#portfolio header a {
+		right: 10px;
+	}
+
+	#portfolio li {
+		width: calc(100% / 2 - 2%);
+		margin: 0 1% 2%;
 		display: inline-block;
 	}
 }
@@ -250,58 +298,34 @@ header h1 {
 	}
 
 	#portfolio header a {
-		font-size: 12pt;
-		margin-right: 0;
+		right: 32px;
 	}
 
-	#portfolio .project, #portfolio header a {
-		-webkit-transform: scale(1);
-	}
-
-	#portfolio .project {
+	#portfolio li {
 		width: 100%;
+		margin: 0;
+		display: inline-block;
 	}
 }
 
 /*============================================================================
-   CONTACT SECTION
+   FOOTER
   ============================================================================*/
-#contact {
+footer {
 	position: relative;
 	width: 100%;
-	padding: 4em;
-	text-align: center;
+	padding: 1%;
 	background-color: #f2f2f2;
+	text-align: center;
 }
 
-#contact form {
-	width: 50%;
-}
+footer h3 {
+	margin: 20px;
+	color: #aaa;
+	font-weight: 100;
 
-#contact input, #contact textarea {
-	position: relative;
-	min-height: 40px;
-	max-width: 100%;
-	background-color: #fff;
-	padding: 1em;
-	margin: 1em 0;
-	border: 0;
-	outline: 0;
-	width: 100%;
-}
-
-textarea {
-	height: 200px;
-}
-
-@media (max-width: 40em) {
-	#contact {
-		text-align: left;
-	}
-
-	#contact form {
-		width: 100%;
-	}
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: greyscale;
 }
 
 /*============================================================================
