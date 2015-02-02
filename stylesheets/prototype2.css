@@ -66,6 +66,14 @@ section header {
   section header h1 {
     margin: 0; }
 
+main {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: block;
+  -webkit-transform: scale(1);
+  transition: -webkit-transform .5s; }
+
 /*============================================================================
    HERO SECTION
   ============================================================================*/
@@ -196,6 +204,41 @@ footer {
     font-weight: 100;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: greyscale; }
+
+/*============================================================================
+   CONTACT FORM
+  ============================================================================*/
+#contact {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  -webkit-transform: translate(0, -100%);
+  display: table;
+  transition: .5s; }
+
+#contact form {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center; }
+
+#contact input, textarea {
+  min-height: 40px;
+  width: 100%;
+  font-size: 16pt;
+  max-width: 500px;
+  border: 1px solid #ddd; }
+
+#contact.show {
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: 1; }
+
+#contact.show + main {
+  -webkit-transform: scale(0.9); }
 
 /*============================================================================
    MEDIA QUERIES
