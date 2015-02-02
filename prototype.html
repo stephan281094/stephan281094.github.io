@@ -11,12 +11,17 @@
 	<script src="javascripts/main.js"></script>
 </head>
 <body>
-	<div id="contact">
-		<form action="">
-			<h1>Get in touch!</h1>
-			<input type="text" placeholder="Email Address"><br>
-			<input type="text" placeholder="Subject"><br>
-			<textarea cols="30" rows="10" placeholder="Your message"></textarea>
+	<div data-modal="contact">
+		<i data-toggle="contact"></i>
+		<i data-toggle="contact"></i>
+		<form>
+			<h1>Get in touch</h1>
+			<p>
+				Send me a message if you are interested in working with me, or if you have any questions.
+			</p>
+			<input type="text" placeholder="Email Address">
+			<input type="text" placeholder="Subject">
+			<textarea placeholder="Your message"></textarea>
 		</form>
 	</div>
 	<main>
@@ -24,7 +29,7 @@
 			<div class="wrap">
 				<h1>Stephan de Vries</h1>
 				<span>Developer &amp; Designer</span>
-				<a>Get in touch</a>
+				<a data-toggle="contact">Get in touch</a>
 			</div>
 		</section>
 		<section id="portfolio">
