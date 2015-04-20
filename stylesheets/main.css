@@ -35,7 +35,7 @@ body {
 }
 
 main {
-	margin: auto;
+	overflow: hidden;
 	display: -webkit-box;
 	display: -moz-box;
 	display: box;
@@ -94,6 +94,8 @@ span {
 h1, span {
 	text-transform: uppercase;
 	cursor: default;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 a:not(.button) {
