@@ -104,7 +104,7 @@ a:not(.button) {
 }
 
 a:not(.button):hover {
-	text-decoration: underline;
+	color: rgba(103, 65, 114, 1);
 }
 
 .button {
