@@ -31,10 +31,12 @@
         close: function() {
             if (!shown) return;
 
-            var modals = document.querySelectorAll('.modal');
-            for (var i = modals.length - 1; i >= 0; i--) {
+            var modals = document.querySelectorAll('.modal'),
+            	i = modals.length;
+
+            while (i--) {
                 modals[i].classList.remove(options.classOpen);
-            };
+            }
 
             shown = false;
 
