@@ -3,7 +3,9 @@
 
     var options = {
         element:   '[data-modal]',
-        classOpen: 'modal-open'
+        classOpen: 'modal-open',
+        onOpen: null,
+        onClose: null
     };
 
     var api = {
@@ -25,10 +27,13 @@
             modal.classList.add(options.classOpen);
             shown = true;
 
+            callback = typeof callback === 'function' ? callback : options.onClose;
+            if (callback) callback(modal);
+
             return this;
         },
 
-        close: function() {
+        close: function(callback) {
             if (!shown) return;
 
             var modals = document.querySelectorAll('.modal'),
@@ -39,6 +44,9 @@
             }
 
             shown = false;
+
+            callback = typeof callback === 'function' ? callback : options.onClose;
+            if (callback) callback(modals);
 
             return this;
         },
