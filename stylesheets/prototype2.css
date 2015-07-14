@@ -98,16 +98,18 @@ h1, span {
     margin-right: auto;
 }
 
-a:not(.btn) {
+a {
     color: #aaa;
     text-decoration: none;
 }
 
-a:not(.btn):hover {
+a:hover {
     color: rgba(103, 65, 114, 1);
 }
 
 .btn {
+    border: 0;
+    background-color: transparent;
     text-decoration: none;
     color: rgba(103, 65, 114, 1);
     padding: 1rem 1.5rem;
