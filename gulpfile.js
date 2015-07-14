@@ -1,9 +1,10 @@
-var gulp      = require('gulp');
-var sass      = require('gulp-sass');
-var concat    = require('gulp-concat');
-var minifycss = require('gulp-minify-css');
-var minifyjs  = require('gulp-uglify');
-var rename    = require('gulp-rename');
+var gulp       = require('gulp');
+var sass       = require('gulp-sass');
+var concat     = require('gulp-concat');
+var minifycss  = require('gulp-minify-css');
+var minifyjs   = require('gulp-uglify');
+var rename     = require('gulp-rename');
+var autoprefix = require('gulp-autoprefixer');
 
 var paths = {
     scss: 'client/stylesheets/**/*.scss',
@@ -13,6 +14,7 @@ var paths = {
 gulp.task('scss', function() {
     gulp.src(paths.scss)
         .pipe(sass({errLogToConsole: true}))
+        .pipe(autoprefix('last 15 versions'))
         .pipe(concat('complete.min.css'))
         .pipe(minifycss())
         .pipe(gulp.dest('build/'))
