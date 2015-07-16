@@ -1,4 +1,4 @@
-# stephan281094.github.io
+# Portfolio
 
 This is my portfolio website. I'm planning on adding a blog here,
 so people can see what projects I am working on and more.
