@@ -3,7 +3,6 @@ var sass       = require('gulp-sass');
 var concat     = require('gulp-concat');
 var minifycss  = require('gulp-minify-css');
 var minifyjs   = require('gulp-uglify');
-var rename     = require('gulp-rename');
 var autoprefix = require('gulp-autoprefixer');
 
 var paths = {
