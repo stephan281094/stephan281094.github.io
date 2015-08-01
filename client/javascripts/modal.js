@@ -1,91 +1,91 @@
 (function() {
-    var shown = false;
+    var shown = false
 
     var options = {
         element:   '[data-modal]',
         classOpen: 'modal-open',
         onOpen: null,
         onClose: null
-    };
+    }
 
     var api = {
 
         config: function(opts) {
-			if (!opts) return options;
+			if (!opts) return options
 
 			for (var key in opts) {
-				options[key] = opts[key];
+				options[key] = opts[key]
 			}
 
-			return this;
+			return this
         },
 
         open: function(modalName, callback) {
-            if (shown) return;
+            if (shown) return
 
-            var modal = document.querySelector('.modal-' + modalName);
-            modal.classList.add(options.classOpen);
-            shown = true;
+            var modal = document.querySelector('.modal-' + modalName)
+            modal.classList.add(options.classOpen)
+            shown = true
 
-            callback = typeof callback === 'function' ? callback : options.onClose;
-            if (callback) callback(modal);
+            callback = typeof callback === 'function' ? callback : options.onClose
+            if (callback) callback(modal)
 
-            return this;
+            return this
         },
 
         close: function(callback) {
-            if (!shown) return;
+            if (!shown) return
 
             var modals = document.querySelectorAll('.modal'),
-            	i = modals.length;
+            	i = modals.length
 
             while (i--) {
-                modals[i].classList.remove(options.classOpen);
+                modals[i].classList.remove(options.classOpen)
             }
 
-            shown = false;
+            shown = false
 
-            callback = typeof callback === 'function' ? callback : options.onClose;
-            if (callback) callback(modals);
+            callback = typeof callback === 'function' ? callback : options.onClose
+            if (callback) callback(modals)
 
-            return this;
+            return this
         },
 
         listen: function listen(element) {
-            if (!element) element = options.element;
+            if (!element) element = options.element
 
             if (typeof element === 'string') {
                 var elements = document.querySelectorAll(element),
-                    i = elements.length;
+                    i = elements.length
 
                 while (i--) {
-                    listen(elements[i]);
+                    listen(elements[i])
                 }
 
-                return;
+                return
             }
 
             element.addEventListener('click', function(event) {
-                event.stopPropagation();
+                event.stopPropagation()
 
                 if (shown) {
-                    api.close();
+                    api.close()
                 } else {
-                    api.open(element.dataset.modal);
+                    api.open(element.dataset.modal)
                 }
             })
 
-            return this;
+            return this
         }
-    };
+    }
 
     document.addEventListener('keyup', function(event) {
-        if (event.keyCode === 27) api.close();
-    });
+        if (event.keyCode === 27) api.close()
+    })
 
-    this.Modal = api;
-})();
+    this.Modal = api
+})()
 
 window.onload = function() {
-    Modal.listen();
+    Modal.listen()
 }
