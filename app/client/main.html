@@ -1,0 +1,21 @@
+<head>
+  <title>Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+</head>
+
+<body>
+  <main>
+    <header>
+      <h1 class="title">Blog</h1>
+      <p class="subtitle">Thoughts about web development and other stuff.</p>
+    </header>
+    <section class="recipes">
+      {{#each recipes}}
+        <a href="/blog/{{ slug }}" class="recipe">
+          <h2>{{ title }}</h2>
+          <p>{{ date }}</p>
+        </a>
+      {{/each}}
+    </section>
+  </main>
+</body>
