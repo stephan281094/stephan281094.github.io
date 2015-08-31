@@ -5,6 +5,10 @@
 
 <template name="layout">
   <main>
+    <header class="header" onClick="FlowRouter.go('/blog');">
+      <h1 class="title"><a href="/blog">Blog</a></h1>
+      <p class="subtitle"><a href="/blog">Thoughts about web development and other stuff.</a></p>
+    </header>
     {{> Template.dynamic template=content}}
   </main>
 </template>
