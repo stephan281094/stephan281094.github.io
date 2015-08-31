@@ -1,0 +1,10 @@
+<template name="post">
+  <header>
+    <h1 class="title"><a href="/blog">Blog</a></h1>
+    <p class="subtitle"><a href="/blog">Thoughts about web development and other stuff.</a></p>
+  </header>
+  <section class="post">
+    <h1>{{post.title}}</h1>
+    {{>Template.dynamic template=post.template}}
+  </section>
+</template>

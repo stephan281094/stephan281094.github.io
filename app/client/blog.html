@@ -1,0 +1,14 @@
+<template name="blog">
+  <header>
+    <h1 class="title"><a href="/blog">Blog</a></h1>
+    <p class="subtitle"><a href="/blog">Thoughts about web development and other stuff.</a></p>
+  </header>
+  <section class="posts">
+    {{#each posts}}
+      <a href="/blog/{{template}}" class="post-item">
+        <h2>{{title}}</h2>
+        <p>{{date}}</p>
+      </a>
+    {{/each}}
+  </section>
+</template>

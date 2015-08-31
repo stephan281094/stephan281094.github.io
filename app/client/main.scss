@@ -34,13 +34,7 @@ a {
   text-align: center;
 }
 
-.recipes {
-  margin: 0 auto;
-  max-width: 650px;
-  padding: 0;
-}
-
-.recipe {
+.post-item {
   position: relative;
   padding: 1rem 0.75rem;
   border-top: 1px solid #f1f1f1;
@@ -62,18 +56,24 @@ a {
   }
 }
 
-.recipe h2 {
+.post-item h2 {
   font-weight: 200;
   margin: 0;
   font-size: 1.5rem;
 }
 
-.recipe p {
+.post-item p {
   margin: 0;
   color: #aaa;
   font-weight: 200;
 }
 
-.recipe:hover {
+.post-item:hover {
   background-color: #f1f1f1;
+}
+
+main {
+  margin: 0 auto;
+  max-width: 650px;
+  padding: 0;
 }
