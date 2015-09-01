@@ -1,8 +1,7 @@
 <template name="post">
   <section class="post">
     <header>
-      <h2>{{post.title}}</h2>
-      <p>{{post.date}}</p>
+      {{>postMeta post=post}}
     </header>
     <div class="body">
       {{>Template.dynamic template=post.template}}

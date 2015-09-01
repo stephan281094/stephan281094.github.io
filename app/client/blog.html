@@ -2,9 +2,15 @@
   <section class="posts">
     {{#each posts}}
       <a href="/blog/{{template}}" class="post-item">
-        <h2>{{title}}</h2>
-        <p>{{date}}</p>
+        {{>postMeta post=this}}
       </a>
     {{/each}}
   </section>
+</template>
+
+<template name="postMeta">
+  <h2 class="title">{{post.title}}</h2>
+  {{#if post.date}}
+    <p>Published on {{post.date}}</p>
+  {{/if}}
 </template>
