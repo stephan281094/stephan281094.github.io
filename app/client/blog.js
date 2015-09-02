@@ -8,6 +8,8 @@ Template.blog.helpers({
 
 Template.post.helpers({
   post: function() {
-    return _.first(_.where(PostList, {template: FlowRouter.getParam('slug')}));
+    var post = _.first(_.where(PostList, {template: FlowRouter.getParam('slug')}));
+
+    return post ? post : FlowLayout.render('layout', {content: 'notfound'});
   }
 });

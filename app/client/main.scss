@@ -6,7 +6,7 @@
   }
 }
 
-html, body {
+html, body, #__flow-root {
   height: 100%;
   min-height: 100%;
 }
@@ -18,16 +18,49 @@ body {
   margin: 0;
 }
 
+.flex {
+  @include flex(1);
+  @include display(flex);
+
+  .centered {
+    margin: auto;
+    text-align: center;
+  }
+}
+
 a {
   text-decoration: none;
   color: inherit;
 }
 
-.body a {
-  color: #a00;
+img {
+  display: inline-block;
+  @include user-select(none);
+}
 
-  &:hover {
-    text-decoration: underline;
+main {
+  margin: 0 auto;
+  max-width: 650px;
+  padding: 0;
+  height: 100%;
+  @include display(flex);
+  @include flex-direction(column);
+}
+
+.body {
+  padding-bottom: 8.4375rem;
+  @include flex-grow(1);
+
+  h1 {
+    font-weight: 200;
+  }
+
+  a {
+    color: #a00;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
 
@@ -35,6 +68,7 @@ a {
   padding-top: 3rem;
   cursor: pointer;
   overflow: hidden;
+  @include flex-shrink(1);
 
   .title {
     font-size: 1.5em;
@@ -113,8 +147,6 @@ a {
 
     img {
       width: 100%;
-      display: block;
-      @include user-select(none);
     }
 
     p {
@@ -127,11 +159,4 @@ a {
       }
     }
   }
-}
-
-main {
-  margin: 0 auto;
-  max-width: 650px;
-  padding: 0;
-  height: 100%;
 }
