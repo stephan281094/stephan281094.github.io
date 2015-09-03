@@ -10,7 +10,7 @@ FlowRouter.route('/blog', {
   }
 });
 
-FlowRouter.route('/blog/:slug', {
+FlowRouter.route('/blog/#/:slug', {
   action: function() {
     FlowLayout.render('layout', {content: 'post'});
   }

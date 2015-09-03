@@ -1,7 +1,7 @@
 <template name="blog">
   <section class="posts">
     {{#each posts}}
-      <a href="/blog/{{template}}" class="post-item">
+      <a href="/blog/#/{{template}}" class="post-item">
         {{>postMeta post=this}}
       </a>
     {{/each}}
