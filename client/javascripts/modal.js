@@ -20,15 +20,15 @@
 			return this
         },
 
-        open: function(modalName, callback) {
+        open: function(modalName, cb) {
             if (shown) return
 
             var modal = document.querySelector('.modal-' + modalName)
             modal.classList.add(options.classOpen)
             shown = true
 
-            callback = typeof callback === 'function' ? callback : options.onClose
-            if (callback) callback(modal)
+            cb = typeof cb === 'function' ? cb : options.onClose
+            if (cb) cb(modal)
 
             return this
         },
