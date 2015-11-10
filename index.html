@@ -9,10 +9,19 @@
 	<link rel="stylesheet" href="client/stylesheets/main.css">
 </head>
 <body>
-	<main>
-		<h1>Stephan de Vries</h1>
-		<span>Developer at <a href="http://angrybytes.com">Angry Bytes</a></span>
-		<a class="button" href="mailto:stephan281094@gmail.com">Get in touch</a>
-	</main>
+	<div class="wrap">
+		<main>
+			<h1>Stephan de Vries</h1>
+			<br>
+			<span>Developer at <a href="http://angrybytes.com">Angry Bytes</a></span>
+			<br>
+			<a class="button" href="mailto:stephan281094@gmail.com">Get in touch</a>
+		</main>
+	</div>
+
+	<script type="text/javascript" src="client/javascripts/fittext.js"></script>
+	<script>
+		window.fitText(document.querySelector('h1'));
+	</script>
 </body>
 </html>
