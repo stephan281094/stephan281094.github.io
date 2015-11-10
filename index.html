@@ -1,27 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Stephan's portfolio</title>
-	<meta name="author" content="S.J. de Vries">
-	<meta name="description" content="Developer at Angry Bytes">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-	<link rel="stylesheet" href="client/stylesheets/main.css">
+  <meta charset="UTF-8">
+  <title>Stephan's portfolio</title>
+  <meta name="author" content="S.J. de Vries">
+  <meta name="description" content="Developer at Angry Bytes">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="client/stylesheets/main.css">
 </head>
 <body>
-	<div class="wrap">
-		<main>
-			<h1>Stephan de Vries</h1>
-			<br>
-			<span>Developer at <a href="http://angrybytes.com">Angry Bytes</a></span>
-			<br>
-			<a class="button" href="mailto:stephan281094@gmail.com">Get in touch</a>
-		</main>
-	</div>
+  <main>
+    <div class="wrap">
+      <h1>Stephan de Vries</h1>
+      <span>Developer at <a href="http://angrybytes.com">Angry Bytes</a></span>
+      <a href="mailto:stephan281094@gmail.com" class="button">Get in touch</a>
+    </div>
+  </main>
 
-	<script type="text/javascript" src="client/javascripts/fittext.js"></script>
-	<script>
-		window.fitText(document.querySelector('h1'));
-	</script>
+  <script type="text/javascript" src="client/javascripts/fittext.js"></script>
+  <script>
+    window.fitText(document.querySelector('h1'));
+    window.fitText(document.querySelector('span'), 2);
+  </script>
 </body>
 </html>
