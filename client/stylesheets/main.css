@@ -45,7 +45,7 @@ h1 {
 span {
   margin-bottom: 2rem;
   font-size: 1.4em;
-  font-weight: 200;
+  font-weight: 300;
   color: #aaa;
   display: inline-block;
   width: 100%;
@@ -60,6 +60,9 @@ h1, span {
 
 h1, span, a.button {
   opacity: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 a:not(.button) {
@@ -91,10 +94,6 @@ a:not(.button):hover {
 
 .button:hover {
   background-color: rgba(123, 85, 134, 1);
-}
-
-.button:focus {
-  outline: none;
 }
 
 .button:active {
