@@ -8,6 +8,7 @@ window.onload = function() {
   (function loop() {
     var element = document.querySelector(els[i]);
     element.classList.add('animated');
+    element.classList.add('fadeInUp');
 
     if (++i < els.length) {
       setTimeout(loop, 350);
