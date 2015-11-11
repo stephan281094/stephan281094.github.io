@@ -58,6 +58,10 @@ h1, span {
   margin-right: auto;
 }
 
+h1, span, a.button {
+  opacity: 0;
+}
+
 a:not(.button) {
   color: #aaa;
   text-decoration: none;
