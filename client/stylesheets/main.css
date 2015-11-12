@@ -94,14 +94,10 @@ a:hover {
   user-select: none;
 }
 
-.button:hover {
+.button:hover, .button:focus {
   background-color: rgba(123, 85, 134, 1);
 }
 
 .button:active {
   background-color: rgba(83, 45, 94, 1);
-}
-
-.button:focus {
-  box-shadow: 0 0 0 3px rgba(103, 65, 114, 0.5);
 }
