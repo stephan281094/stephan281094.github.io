@@ -1,5 +1,6 @@
 window.fitText(document.querySelector('h1'));
 window.fitText(document.querySelector('span'), 2);
+document.addEventListener('touchstart', function(){}, true);
 
 window.onload = function() {
   var els = ['h1', 'span', 'a.button'],
