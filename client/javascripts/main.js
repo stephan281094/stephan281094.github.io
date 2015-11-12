@@ -3,16 +3,26 @@ window.fitText(document.querySelector('span'), 2);
 document.addEventListener('touchstart', function(){}, true);
 
 window.onload = function() {
-  var els = ['h1', 'span', 'a.button'],
-      i   = 0;
+  app.fadeElementsIn();
+}
 
-  (function loop() {
-    var element = document.querySelector(els[i]);
-    element.classList.add('animated');
-    element.classList.add('fadeInUp');
+var app = {
+  fadeElementsIn: function() {
+    var els = ['h1', 'span', '.contact'],
+        i   = 0;
 
-    if (++i < els.length) {
-      setTimeout(loop, 350);
-    }
-  })();
+    (function loop() {
+      var element = document.querySelector(els[i]);
+      element.classList.add('animated');
+      element.classList.add('fadeInUp');
+
+      if (++i < els.length) {
+        setTimeout(loop, 350);
+      }
+    })();
+  },
+
+  contact: function() {
+    document.location.href = 'mailto:stephan281094@gmail.com';
+  }
 }
