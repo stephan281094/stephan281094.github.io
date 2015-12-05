@@ -9,7 +9,7 @@ insecure
 meteorhacks:flow-router
 meteorhacks:flow-layout
 fourseven:scss
-wolves:bourbon
+wolves:bourbon@3.1.0
 markdown
 inno:zoom
 standard-minifiers
