@@ -3,7 +3,7 @@ var app = {
     var els = ['h1', 'span', '.contact'],
         i   = 0
 
-    (function loop () {
+    ;(function loop () {
       var element = document.querySelector(els[i])
       element.classList.add('animated')
       element.classList.add('fadeInUp')
