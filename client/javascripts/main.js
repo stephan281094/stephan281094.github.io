@@ -1,6 +1,6 @@
 var app = {
   fadeElementsIn: function () {
-    var els = ['h1', 'span', '.contact'],
+    var els = ['.my-name', '.my-description', '.contact'],
         i   = 0
 
     ;(function loop () {
@@ -12,17 +12,9 @@ var app = {
         setTimeout(loop, 350)
       }
     })()
-  },
-
-  contact: function () {
-    document.location.href = 'mailto:stephan281094@gmail.com'
   }
 }
 
 window.onload = function () {
-  window.fitText(document.querySelector('h1'))
-  window.fitText(document.querySelector('span'), 2)
-  document.addEventListener('touchstart', function () {}, true)
-  
   app.fadeElementsIn()
 }
