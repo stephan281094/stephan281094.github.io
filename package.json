@@ -1,13 +1,22 @@
 {
   "name": "stephan281094.github.io",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "The portfolio website of Stephan de Vries",
+  "scripts": {
+    "start": "webpack-dev-server --port 3000 --host 0.0.0.0",
+    "build": "webpack -p"
+  },
   "devDependencies": {
-    "gulp": "^3.9.0",
-    "gulp-sass": "^2.0.4",
-    "gulp-concat": "^2.6.0",
-    "gulp-uglify": "^1.2.0",
-    "gulp-minify-css": "^1.2.0",
-    "gulp-autoprefixer": "^2.3.1"
+    "autoprefixer": "^6.5.0",
+    "css-loader": "^0.25.0",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "node-sass": "^3.10.1",
+    "postcss-loader": "^0.13.0",
+    "sass-loader": "^4.0.2",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.2",
+    "webpack-dev-server": "^1.16.1",
+    "webpack-merge": "^0.14.1",
+    "webpack-validator": "^2.2.8"
   }
 }
